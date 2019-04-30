@@ -46,23 +46,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		3A283FDF2278550800213D84 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3AE9919A227772F100B7876F /* Main.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		3A283FE02278550900213D84 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				3AE99198227772F100B7876F /* ViewController.swift */,
-			);
-			name = Controller;
-			path = "New Group/Controller";
-			sourceTree = "<group>";
-		};
 		3A283FE12278551B00213D84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +57,22 @@
 				3AE991A2227772F300B7876F /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A283FEC2278BED100213D84 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3AE99198227772F100B7876F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3A283FED2278BEF500213D84 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3AE9919A227772F100B7876F /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3AE9918A227772F100B7876F = {
@@ -95,9 +94,9 @@
 		3AE99195227772F100B7876F /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
+				3A283FED2278BEF500213D84 /* View */,
+				3A283FEC2278BED100213D84 /* Controller */,
 				3A283FDE227854F800213D84 /* Model */,
-				3A283FE02278550900213D84 /* Controller */,
-				3A283FDF2278550800213D84 /* View */,
 				3A283FE12278551B00213D84 /* Supporting Files */,
 			);
 			path = Instagrid;

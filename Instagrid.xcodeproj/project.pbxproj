@@ -67,7 +67,7 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		3A283FED2278BEF500213D84 /* View */ = {
+		3A283FEE2278D15F00213D84 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				3AE9919A227772F100B7876F /* Main.storyboard */,
@@ -94,7 +94,7 @@
 		3AE99195227772F100B7876F /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
-				3A283FED2278BEF500213D84 /* View */,
+				3A283FEE2278D15F00213D84 /* View */,
 				3A283FEC2278BED100213D84 /* Controller */,
 				3A283FDE227854F800213D84 /* Model */,
 				3A283FE12278551B00213D84 /* Supporting Files */,

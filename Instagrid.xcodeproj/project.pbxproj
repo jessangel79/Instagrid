@@ -54,14 +54,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		3A283FE82278A87000213D84 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3AE9919A227772F100B7876F /* Main.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		3A283FE92278A8A900213D84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +65,14 @@
 				3AE991A2227772F300B7876F /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A283FEA2278AAE200213D84 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3AE9919A227772F100B7876F /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3AE9918A227772F100B7876F = {
@@ -95,8 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				3A283FE62278A82400213D84 /* Model */,
+				3A283FEA2278AAE200213D84 /* View */,
 				3A283FE72278A83D00213D84 /* Controller */,
-				3A283FE82278A87000213D84 /* View */,
 				3A283FE92278A8A900213D84 /* Supporting Files */,
 			);
 			path = Instagrid;

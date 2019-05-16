@@ -18,37 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="nWi-d4-sdf">
-                                <rect key="frame" x="100" y="267" width="120" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="nWi-d4-sdf" secondAttribute="height" multiplier="123:35" id="IA8-kC-jqF"/>
-                                </constraints>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gGs-oY-Lks">
+                                <rect key="frame" x="53.5" y="244" width="213" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="IconForm" translatesAutoresizingMaskIntoConstraints="NO" id="zhH-SX-b8b">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="2dE-CL-d2K"/>
+                                            <constraint firstAttribute="height" constant="80" id="zrg-0F-3rh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="nWi-d4-sdf">
+                                        <rect key="frame" x="90" y="22.5" width="123" height="35"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.74281030893325806" green="0.8383139967918396" blue="0.89020544290542603" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nWi-d4-sdf" secondAttribute="trailing" constant="100" id="3sh-j9-qmR"/>
-                            <constraint firstItem="nWi-d4-sdf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="4qu-yp-9qw"/>
-                            <constraint firstItem="nWi-d4-sdf" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Dyf-4N-agx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nWi-d4-sdf" secondAttribute="bottom" constant="142.5" id="KfO-2R-afc"/>
-                            <constraint firstItem="nWi-d4-sdf" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Tv4-P9-6kb"/>
-                            <constraint firstItem="nWi-d4-sdf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="142.5" id="aPs-5T-SfQ"/>
+                            <constraint firstItem="gGs-oY-Lks" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="KJR-qo-yVt"/>
+                            <constraint firstItem="gGs-oY-Lks" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ZqI-tH-FCW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="KfO-2R-afc"/>
-                                <exclude reference="aPs-5T-SfQ"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact">
-                            <mask key="constraints">
-                                <exclude reference="3sh-j9-qmR"/>
-                                <exclude reference="KfO-2R-afc"/>
-                                <exclude reference="4qu-yp-9qw"/>
-                                <exclude reference="aPs-5T-SfQ"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -57,6 +48,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="IconForm" width="805" height="805"/>
         <image name="Instagrid" width="123" height="35"/>
     </resources>
 </document>

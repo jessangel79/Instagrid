@@ -65,7 +65,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2l-7n-vqD" userLabel="Photo View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2l-7n-vqD" userLabel="Photo View" customClass="PhotoView" customModule="Instagrid" customModuleProvider="target">
                                 <rect key="frame" x="40" y="164" width="240" height="240"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1gI-rU-CL2" userLabel="Photo Stack View">
@@ -77,13 +77,17 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bae-nN-hEx">
                                                         <rect key="frame" x="0.0" y="0.0" width="97.5" height="97.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BPr-XT-zuD" userLabel="Image View 1">
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BPr-XT-zuD" userLabel="Image View 1">
                                                                 <rect key="frame" x="0.0" y="0.0" width="97.5" height="97.5"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytl-UB-FH9">
                                                                 <rect key="frame" x="25" y="25" width="48" height="48"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
                                                                 <state key="normal" image="BluePlusSign"/>
+                                                                <state key="highlighted" image="GrayPlusSign"/>
+                                                                <connections>
+                                                                    <action selector="loadImageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Srf-xS-DoV"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -96,16 +100,20 @@
                                                             <constraint firstAttribute="bottom" secondItem="BPr-XT-zuD" secondAttribute="bottom" id="biN-aH-yUM"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eps-Mh-KsV">
+                                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eps-Mh-KsV">
                                                         <rect key="frame" x="112.5" y="0.0" width="97.5" height="97.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vnh-ed-5TC" userLabel="Image View 2">
+                                                            <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vnh-ed-5TC" userLabel="Image View 2">
                                                                 <rect key="frame" x="0.0" y="0.0" width="97.5" height="97.5"/>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaU-FL-1qD">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaU-FL-1qD">
                                                                 <rect key="frame" x="25" y="25" width="48" height="48"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
                                                                 <state key="normal" image="BluePlusSign"/>
+                                                                <state key="highlighted" image="GrayPlusSign"/>
+                                                                <connections>
+                                                                    <action selector="loadImageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uya-vS-Px3"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -123,16 +131,20 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="88e-j4-08r" userLabel="Down Stack View">
                                                 <rect key="frame" x="0.0" y="112.5" width="210" height="97.5"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XhI-JP-fuy">
+                                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XhI-JP-fuy">
                                                         <rect key="frame" x="0.0" y="0.0" width="210" height="97.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZcJ-Sp-DaF" userLabel="Image View 3">
+                                                            <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZcJ-Sp-DaF" userLabel="Image View 3">
                                                                 <rect key="frame" x="0.0" y="0.0" width="210" height="97.5"/>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ER-yx-yl8">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ER-yx-yl8">
                                                                 <rect key="frame" x="81" y="25" width="48" height="48"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
                                                                 <state key="normal" image="BluePlusSign"/>
+                                                                <state key="highlighted" image="GrayPlusSign"/>
+                                                                <connections>
+                                                                    <action selector="loadImageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6fC-h2-QJp"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -145,16 +157,20 @@
                                                             <constraint firstAttribute="trailing" secondItem="ZcJ-Sp-DaF" secondAttribute="trailing" id="lqw-Jj-Q3N"/>
                                                         </constraints>
                                                     </view>
-                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z3a-A5-5Tk">
+                                                    <view hidden="YES" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z3a-A5-5Tk">
                                                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="97.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xoh-xr-NiQ" userLabel="Image View 4">
+                                                            <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xoh-xr-NiQ" userLabel="Image View 4">
                                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="97.5"/>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOH-1H-FdT">
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOH-1H-FdT">
                                                                 <rect key="frame" x="-24" y="25" width="48" height="48"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
                                                                 <state key="normal" image="BluePlusSign"/>
+                                                                <state key="highlighted" image="GrayPlusSign"/>
+                                                                <connections>
+                                                                    <action selector="loadImageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kj2-8D-p08"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -215,24 +231,46 @@
                                         <include reference="u4Q-6r-xjl"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outlet property="downStackView" destination="88e-j4-08r" id="1ca-ma-eeN"/>
+                                    <outlet property="photoStackView" destination="1gI-rU-CL2" id="JIK-2B-hFH"/>
+                                    <outlet property="topStackView" destination="IqE-uJ-wqm" id="bKn-UK-gd1"/>
+                                    <outletCollection property="imagesView" destination="BPr-XT-zuD" collectionClass="NSMutableArray" id="ceo-zq-lWf"/>
+                                    <outletCollection property="imagesView" destination="Vnh-ed-5TC" collectionClass="NSMutableArray" id="Z5J-JN-p01"/>
+                                    <outletCollection property="imagesView" destination="ZcJ-Sp-DaF" collectionClass="NSMutableArray" id="rRa-IG-Erq"/>
+                                    <outletCollection property="imagesView" destination="xoh-xr-NiQ" collectionClass="NSMutableArray" id="w0Z-TZ-7VI"/>
+                                    <outletCollection property="imagesButton" destination="ytl-UB-FH9" collectionClass="NSMutableArray" id="y5r-fn-Gqt"/>
+                                    <outletCollection property="imagesButton" destination="GaU-FL-1qD" collectionClass="NSMutableArray" id="fKw-hb-kNT"/>
+                                    <outletCollection property="imagesButton" destination="3ER-yx-yl8" collectionClass="NSMutableArray" id="bOL-YQ-adW"/>
+                                    <outletCollection property="imagesButton" destination="qOH-1H-FdT" collectionClass="NSMutableArray" id="6LK-pI-JTh"/>
+                                </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="kAB-sW-VXS" userLabel="Button Stack View">
                                 <rect key="frame" x="25" y="444" width="270" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clg-5J-2NU">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clg-5J-2NU" userLabel="ButtonLayout1">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <state key="normal" backgroundImage="Layout 1"/>
                                         <state key="selected" image="Selected"/>
+                                        <connections>
+                                            <action selector="buttonLayoutTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XiR-tu-SGZ"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nuq-c7-82w">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nuq-c7-82w" userLabel="ButtonLayout2">
                                         <rect key="frame" x="95" y="0.0" width="80" height="80"/>
                                         <state key="normal" backgroundImage="Layout 2"/>
                                         <state key="selected" image="Selected"/>
+                                        <connections>
+                                            <action selector="buttonLayoutTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s7s-7g-jRS"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bx3-Hg-4gE">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bx3-Hg-4gE" userLabel="ButtonLayout3">
                                         <rect key="frame" x="190" y="0.0" width="80" height="80"/>
                                         <state key="normal" backgroundImage="Layout 3"/>
                                         <state key="selected" image="Selected"/>
+                                        <connections>
+                                            <action selector="buttonLayoutTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jUC-59-SkH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <variation key="heightClass=compact" axis="vertical"/>
@@ -297,6 +335,14 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="photoView" destination="I2l-7n-vqD" id="P6u-4L-rz9"/>
+                        <outlet property="swipe" destination="yf5-HM-MyX" id="Ceh-0y-GRa"/>
+                        <outletCollection property="ButtonsLayout" destination="Nuq-c7-82w" collectionClass="NSMutableArray" id="Jaq-wu-sTA"/>
+                        <outletCollection property="buttonsLayout" destination="bx3-Hg-4gE" collectionClass="NSMutableArray" id="JEy-mH-c0f"/>
+                        <outletCollection property="buttonsLayout" destination="clg-5J-2NU" collectionClass="NSMutableArray" id="LFA-SM-dgh"/>
+                        <outletCollection property="buttonsLayout" destination="Nuq-c7-82w" collectionClass="NSMutableArray" id="D3j-h2-0ao"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -305,6 +351,7 @@
     </scenes>
     <resources>
         <image name="BluePlusSign" width="48" height="48"/>
+        <image name="GrayPlusSign" width="48" height="48"/>
         <image name="Layout 1" width="80" height="80"/>
         <image name="Layout 2" width="80" height="80"/>
         <image name="Layout 3" width="80" height="80"/>

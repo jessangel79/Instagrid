@@ -47,17 +47,28 @@ class PhotoView: UIView {
         }
     }
     
+    // Reset photoView - delete all images and reset all buttons
+    func resetPhotoView() {
+        deleteImagesView()
+        resetImagesButton()
+    }
     
-    // --- To delete ??? --- //
-    // #### ??? #### //
-    func resetImagesView() {
+    // Delete all images in array "imagesView"
+    private func deleteImagesView() {
         for imageView in imagesView {
-            resetImageView(imageView)
+            deleteImageView(imageView)
         }
     }
     
-    // #### ??? #### //
-    private func resetImageView(_ imageView: UIImageView) {
+    // Delete an image
+    private func deleteImageView(_ imageView: UIImageView) {
         imageView.image = nil
+    }
+    
+    // Reset all buttons in array "imagesButton"
+    private func resetImagesButton() {
+        for button in imagesButton {
+            button.isHidden = false
+        }
     }
 }

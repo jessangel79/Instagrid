@@ -41,7 +41,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         tagImage = sender.tag
         pickedPhotoLibrary()
     }
-    
+
+    @IBAction func resetPhotoViewButton() {
+        alertReset()
+    }
 
     // MARK: - Methods
     override func viewDidLoad() {
@@ -154,6 +157,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
+    }
+    
+    // Displays an alert message to the user to confirm photo reset
+    private func alertReset() {
+        if checkIfPhoto() {
+            let alertReset = UIAlertController(title: "Reset", message: "Do you want to reset the photos ?", preferredStyle: .alert)
+            alertReset.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+                self.photoView.resetPhotoView()
+            }))
+            alertReset.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+            present(alertReset, animated: true, completion: nil)
+        } else {
+            alert(title: "Alert", message: "There is no photo")
+            print("Alert no photo")
+        }
     }
 }
 

@@ -37,11 +37,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    // Button to load an image
     @IBAction func loadImageButtonTapped(_ sender: UIButton) {
         tagImage = sender.tag
         pickedPhotoLibrary()
     }
 
+    // ### BONUS : button to reset all images ###
     @IBAction func resetPhotoViewButton() {
         alertReset()
     }
@@ -52,7 +54,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         swipeGestureRecognizer()
     }
     
-    // --- UIImagePickerControllerDelegate Methods --- //
+    // --- UIImagePickerControllerDelegate Methods : to interact with the image picker interface
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             guard let tag = tagImage else { return }
@@ -70,7 +72,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
          dismiss(animated: true, completion: nil)
     }
     
-    // --- UIImagePickerController --- //
+    // --- UIImagePickerController : manages the system interfaces choosing items from the user's media library
     private func pickedPhotoLibrary() {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
@@ -84,7 +86,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         pickedPhotoLibrary()
     }
     
-    // --- UISwipeGestureRecognizer --- //
+    // --- UISwipeGestureRecognizer : for swiping gestures in one or more directions
     private func swipeGestureRecognizer() {
         let directionsSwipe = [UISwipeGestureRecognizer.Direction.up, UISwipeGestureRecognizer.Direction.left]
         for direction in directionsSwipe {
@@ -94,7 +96,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    // Swipe action -- Test 1 - OK // Slide up or left depending on device orientation
+    // Swipe action - Slide up or left depending on device orientation
     @objc private func actionSwipe(gesture: UISwipeGestureRecognizer) {
         let screenWidth = UIScreen.main.bounds.width
         let screenHeight = UIScreen.main.bounds.height
@@ -159,10 +161,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(alert, animated: true, completion: nil)
     }
     
-    // Displays an alert message to the user to confirm photo reset
+    // ### BONUS - Displays an alert message to the user to confirm photo reset ###
     private func alertReset() {
         if checkIfPhoto() {
-            let alertReset = UIAlertController(title: "Reset", message: "Do you want to reset the photos ?", preferredStyle: .alert)
+            let alertReset = UIAlertController(title: "Reset", message: "Do you want to reset all the photos ?", preferredStyle: .alert)
             alertReset.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
                 self.photoView.resetPhotoView()
             }))

@@ -39,3 +39,9 @@
 ------------------------------
 
 ## Bonus :
+
+Mon bonus pour cette application concerne la vérification de la présence d’au moins une photo dans la grille avant le partage et l’ajout d’un bouton permettant de réinitialiser les cases de la grille.
+
+---
+
+My bonus for this application is to check the presence of at least one photo in the grid before sharing and to add a button to reset the views of the grid.

@@ -54,7 +54,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         swipeGestureRecognizer()
     }
     
-    // --- UIImagePickerControllerDelegate Methods : to interact with the image picker interface
+    // --- UIImagePickerControllerDelegate Methods : A set of methods to interact with the image picker interface
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             guard let tag = tagImage else { return }
@@ -107,7 +107,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             UIView.animate(withDuration: 0.4, animations: {self.photoView.transform = translationTransformUp})
             print("Swipe up")
             shareImages()
-        } else if gesture.direction == .left && UIDevice.current.orientation.isLandscape { //  UISwipeGestureRecognizer.Direction.left && (UIDeviceOrientation.landscapeLeft.isLandscape || UIDeviceOrientation.landscapeRight.isLandscape)
+        } else if gesture.direction == .left && UIDevice.current.orientation.isLandscape {
             UIView.animate(withDuration: 0.4, animations: {self.photoView.transform = translationTransformLeft})
             print("Swipe left")
             shareImages()
